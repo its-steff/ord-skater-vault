@@ -1,0 +1,48 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0 !important;
+	background-image: linear-gradient(to right top, #ef7a33, #f58f35, #faa33a, #fdb842, #ffcc4d);
+}
+
+html {
+	font-size: 10px;
+	color: #ffff;
+	font-family: sans-serif;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	all: unset;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+p {
+	//font-size: $font-body;
+	font-size: $font-size-2xl;
+}
