@@ -11,6 +11,7 @@ $space-8: 0.8rem;
 $space-10: 1rem;
 $space-12: 1.2rem;
 $space-16: 1.6rem;
+$space-18: 1.8rem;
 $space-20: 2rem;
 $space-24: 2.4rem;
 $space-28: 2.8rem;
@@ -30,6 +31,16 @@ $font-size-2xl: 2.2rem;
 $font-size-xl: 2rem;
 $font-size-lg: 1.8rem;
 $font-size-md: 1.6rem;
+
+// FONT MIX-INS ---------
+@mixin font-h1 {
+	font-size: $font-size-3xl;
+	line-height: 3.5rem;
+
+	@include mq-min-md {
+		font-size: $font-size-4xl;
+	}
+}
 
 // MIX-IN MEDIA QUERIES -------------------
 

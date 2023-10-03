@@ -1,9 +1,6 @@
 <script lang="ts">
 	export let showMenu: boolean;
-
-	const handleClick = () => {
-		showMenu = !showMenu;
-	};
+	export let handleClick: () => void;
 </script>
 
 {#if showMenu}

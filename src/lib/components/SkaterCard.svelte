@@ -39,6 +39,10 @@
 		border-radius: 10px;
 		display: flex;
 		justify-content: space-between;
-		margin: 12px 0;
+		margin-bottom: $space-12;
+
+		@include mq-min-lg {
+			margin-bottom: $space-20;
+		}
 	}
 </style>

@@ -1,15 +1,19 @@
-<script>
+<script lang="ts">
 	import MegaMenu from './MegaMenu.svelte';
 
 	$: showMenu = false;
 
 	const handleClick = () => {
-		showMenu = !showMenu;
+		if (showMenu === false) {
+			showMenu = true;
+		} else {
+			showMenu = false;
+		}
 	};
 </script>
 
 {#if showMenu}
-	<MegaMenu {showMenu} />
+	<MegaMenu {showMenu} {handleClick} />
 {/if}
 <header>
 	<span><a href="/">🐯 ORD Skater Vault</a></span>
@@ -21,11 +25,13 @@
 			<li><a href="/list-all">List All</a></li>
 			<li><a href="/request">Request</a></li>
 		</ul>
-		<button class="burgerIcon-container" on:click={handleClick}>
-			<span />
-			<span />
-			<span />
-		</button>
+		{#if !showMenu}
+			<button class="burgerIcon-container" on:click={handleClick}>
+				<span />
+				<span />
+				<span />
+			</button>
+		{/if}
 	</nav>
 </header>
 
@@ -66,8 +72,6 @@
 				}
 			}
 			.burgerIcon-container {
-				//border: 1px solid black;
-				//all: unset;
 				width: 40px;
 				height: 30px;
 				display: flex;
