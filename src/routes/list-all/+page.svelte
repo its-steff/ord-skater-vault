@@ -4,8 +4,8 @@
 	const skaterData = data.data;
 </script>
 
-<h1>Current Registered Skaters</h1>
 <section>
+	<h1>Current Registered Skaters</h1>
 	{#if skaterData}
 		{#each skaterData as skater, i}
 			<SkaterCard skaterNumber={skater.skaterNumber} skaterName={skater.skaterName} index={i} />

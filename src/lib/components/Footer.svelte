@@ -10,7 +10,6 @@
 		width: 100%;
 		font-size: $font-size-2xl;
 		padding: $space-16 $space-20;
-
 		border-top: 1px solid white;
 		margin-top: auto;
 		div {
